@@ -2,8 +2,8 @@
 
 set -e
 
-CATALINA_HOME='/usr/share/tomcat7-codedeploy'
-DEPLOY_TO_ROOT='true'
+CATALINA_HOME='/usr/share/tomcat8'
+DEPLOY_TO_ROOT='false'
 CONTEXT_PATH='application'
 SERVER_HTTP_PORT='8080'
 
@@ -32,4 +32,4 @@ cp $WAR_STAGED_LOCATION $CATALINA_HOME/webapps/$CONTEXT_PATH.war
 cp $CATALINA_HOME/conf/server.xml $CATALINA_HOME/conf/server.xml.bak
 xsltproc $HTTP_PORT_CONFIG_XSL_LOCATION $CATALINA_HOME/conf/server.xml.bak > $CATALINA_HOME/conf/server.xml
 
-service tomcat7 start
+service tomcat8 start
