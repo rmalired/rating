@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: Rating.war
+  - source: target/Rating.war
     destination: /tmp/codedeploy-eclipse-deployment-staging-area/
   - source: /scripts/configure_http_port.xsl
     destination: /tmp/codedeploy-eclipse-deployment-staging-area/
